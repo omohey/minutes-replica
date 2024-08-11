@@ -48,9 +48,9 @@ const MapBatch = ({ orders, drivers, rowsRef }: TProps) => {
             rowsRef.current[order1]?.classList.add(orderStyles.highlight);
             rowsRef.current[order2]?.classList.add(orderStyles.highlight);
 
-            const handleClickOutside = (event) => {
+            const handleClickOutside = (event: MouseEvent) => {
                 if (
-                    !suggestedBatchesRef.current?.contains(event.target)
+                    !suggestedBatchesRef.current?.contains(event.target as Node)
                 ) {
                     rowsRef.current[order1]?.classList.remove(orderStyles.highlight);
                     rowsRef.current[order2]?.classList.remove(orderStyles.highlight);
