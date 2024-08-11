@@ -54,7 +54,7 @@ export default function Home() {
 
 
   const { data: orders } = useSWR("orders", async () => {
-    const ordersRaw = await fetch('http://localhost:3000/api/orders', {
+    const ordersRaw = await fetch('/api/orders', {
       method: 'GET',
       cache: 'no-store'
     });
@@ -64,7 +64,7 @@ export default function Home() {
   );
 
   const { data: drivers } = useSWR("drivers", async () => {
-    const driversRaw = await fetch('http://localhost:3000/api/drivers', {
+    const driversRaw = await fetch('/api/drivers', {
       method: 'GET',
       cache: 'no-store'
     });
