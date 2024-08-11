@@ -21,4 +21,4 @@ export function MapProvider({ children }: { children: ReactNode }) {
 
     // Return the children prop wrapped by this MapProvider component
     return children;
-}
+} 
