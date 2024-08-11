@@ -1,7 +1,7 @@
 # Noon Minutes
 
 ## Overview
-This is a replica for the noon minutes orders/ drivers page. It contains the information for orders and drivers along with their locations on the map.
+This is a replica for the noon minutes orders/ drivers page. It contains the information for orders and drivers along with their locations on the map. [Here](https://minutes-replica.vercel.app/) is the link for the production on vercel.
 
 <img width="1261" alt="Screenshot 2024-08-11 at 5 18 51 PM" src="https://github.com/user-attachments/assets/993efe8f-1e10-4a46-92e6-d127e52bafcd">
 
