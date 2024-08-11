@@ -1,0 +1,13 @@
+@import "../styles/variables";
+
+.mapContainer {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+
+    > div:first-child {
+        width: 65%;
+    }
+
+    
+}

@@ -4,7 +4,7 @@ const data = [
     "is_cancellation_requested": 0,
     "mp_code": "nooninstant",
     "order_status": "Created",
-    "awb_nr": null,
+    "awb_nr": "254",
     "delivery_address": {
       "lat": 25.1987675,
       "lng": 55.2749021,
@@ -52,7 +52,7 @@ const data = [
     "is_cancellation_requested": 0,
     "mp_code": "namshi",
     "order_status": "Fulfilling",
-    "awb_nr": "PCB234777A",
+    "awb_nr": "255",
     "delivery_address": {
       "lat": 25.2000935,
       "lng": 55.2736257,
@@ -109,7 +109,7 @@ const data = [
     "is_cancellation_requested": 0,
     "mp_code": "nooncore",
     "order_status": "Fulfilled",
-    "awb_nr": null,
+    "awb_nr": 256,
     "delivery_address": {
       "lat": 25.189507,
       "lng": 55.264036,
@@ -166,7 +166,7 @@ const data = [
     "is_cancellation_requested": 0,
     "mp_code": "nooninstant",
     "order_status": "Cancelled",
-    "awb_nr": null,
+    "awb_nr": 257,
     "delivery_address": {
       "lat": 25.187142,
       "lng": 55.278203,

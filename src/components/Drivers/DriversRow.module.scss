@@ -2,7 +2,12 @@
 
 tr.container:focus-within {
     border: 1px solid $text-info-default-700;
+    
+    &:first-child {
+        border-top: 1.5px solid $text-info-default-700;
+    }
 }
+
 
 .vehicle {
     display: grid;

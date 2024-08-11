@@ -10,11 +10,6 @@ import { DarkStore, DriverPinMap, OrderPin } from './SVGs';
 import { svgToDataURL } from '@/utils/SvgToUrl';
 import { driverStatusMap, statusMap } from '@/constants/status';
 
-//Map's styling
-export const defaultMapContainerStyle = {
-
-};
-
 const defaultMapCenter = {
     lat: 25.194876,
     lng: 55.274539
@@ -32,6 +27,7 @@ type TProps = {
     orders: TOrder[]
     drivers: TDriver[]
     rowsRef: React.MutableRefObject<{ [key: string]: HTMLTableRowElement | null }>;
+    seeBatch?: boolean;
 }
 
 type TWareHouse = {
@@ -39,7 +35,7 @@ type TWareHouse = {
     lng: number
 }
 
-const Map = ({ orders, drivers, rowsRef }: TProps) => {
+const Map = ({ orders, drivers, rowsRef, seeBatch }: TProps) => {
     const [wareHouses, setWareHouses] = useState<TWareHouse[]>([]);
 
     const customMarkerIcon = useMemo(() => {
@@ -93,7 +89,7 @@ const Map = ({ orders, drivers, rowsRef }: TProps) => {
                 }
                 )}
 
-                {drivers.map(driver => {
+                {!seeBatch && drivers.map(driver => {
                     return <Marker
                         key={driver.name}
                         position={{ lat: driver.location.lat, lng: driver.location.lng }}
@@ -106,7 +102,7 @@ const Map = ({ orders, drivers, rowsRef }: TProps) => {
                     </Marker>
                 }
                 )}
-                {
+                {!seeBatch &&
                     wareHouses.map((wareHouse, index) => {
                         return <Marker
                             key={index}

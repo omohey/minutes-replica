@@ -1,0 +1,43 @@
+@import '../styles/variables';
+
+.suggestedBatch {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-medium;
+    box-shadow: 0px 0px 2px 1px $border-radius-color;
+    overflow-y: scroll;
+    max-height: 400px;
+
+    .header {
+        font-size: 18px;
+        color: $text-primary;
+        font-weight: $font-weight-normal;
+        background-color: $background-color;
+        padding: $spacing-small;
+        border-radius: $border-radius-medium;
+    }
+
+    .batch {
+        padding: $spacing-small;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-bottom: 1px solid $border-color;
+        row-gap: 10px;
+        
+        &:first-child {
+            border-top: 1px solid $border-color;
+        }
+
+        .package {
+            background-color: $background-tertiary-100;
+            width: fit-content;
+            padding: 2px 8px;
+            border-radius: $border-radius-large;
+            font-size: 12px;
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
