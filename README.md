@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Noon Minutes
 
-## Getting Started
+## Overview
+This is a replica for the noon minutes orders/ drivers page. It contains the information for orders and drivers along with their locations on the map.
 
-First, run the development server:
+<img width="1261" alt="Screenshot 2024-08-11 at 5 18 51 PM" src="https://github.com/user-attachments/assets/993efe8f-1e10-4a46-92e6-d127e52bafcd">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Orders Table
+This table contains order information which includes: 
+* Order Number
+* Package
+* Status
+* Flags
+* Pickup/ Delivery ETA
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<img width="590" alt="Screenshot 2024-08-11 at 4 59 27 PM" src="https://github.com/user-attachments/assets/16a9ce19-48ed-4f05-a177-94a963f39af7">
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+You can filter orders by status by choosing an option from the dropdown at the top of the table:
+<img width="585" alt="Screenshot 2024-08-11 at 5 14 28 PM" src="https://github.com/user-attachments/assets/2f41b187-383b-4fa1-bc33-05a2141ea112">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Moreover, clicking on an order reveals additional information such as Name, Address and Contact number:
+<img width="585" alt="Screenshot 2024-08-11 at 5 12 36 PM" src="https://github.com/user-attachments/assets/181253c7-30ab-4d00-913b-a8bb758ce413">
 
-## Deploy on Vercel
+### Drivers Table
+The drivers table contains driver information which includes: 
+* Vehicle Type
+* Driver Name
+* Status
+* Distance
+* Arrival ETA
+* Action
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<img width="548" alt="Screenshot 2024-08-11 at 5 16 33 PM" src="https://github.com/user-attachments/assets/5a606f7e-59fb-40f6-bac3-9f199fb0fe6a">
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Map
+This google map is used to show the order and driver locations relative to the warehouse. Each order/driver is shown as a pin that has a color corresponding to its status. 
+
+<img width="748" alt="Screenshot 2024-08-11 at 5 21 57 PM" src="https://github.com/user-attachments/assets/4661ef9b-4dd4-4166-ba5e-ea6f0cc4184b">
+
+Whenever a driver/ order is clicked the page scrolls to the selected driver/ order row in the corresponding table and the row has a blue highlight to show that it is selected.
+
+<img width="1260" alt="Screenshot 2024-08-11 at 5 24 08 PM" src="https://github.com/user-attachments/assets/ddd8bcf7-7b74-431a-bc7b-5b76a33304ef">
+
+### Suggested Batches
+This is a section that shows orders that are suggested to be batched together.
+
+<img width="400" alt="Screenshot 2024-08-11 at 5 30 52 PM" src="https://github.com/user-attachments/assets/c31cae29-8bcd-4daf-b806-ac17fa719aa2">
+
+This section integrates with the map. Whenever you hover over a suggested batch, the corresponding orders are shown on the map.
+<img width="1178" alt="Screenshot 2024-08-11 at 5 35 12 PM" src="https://github.com/user-attachments/assets/a2df5fc5-3968-4607-82e5-83de9fa3e781">
+
+When a suggested batch is clicked the orders suggested will be highlighted and the page scrolls to the first order.
+<img width="1177" alt="Screenshot 2024-08-11 at 5 37 31 PM" src="https://github.com/user-attachments/assets/881789d5-72c7-4d8b-8d67-6f725bc7d17a">
+
+## Demo
+
+https://github.com/user-attachments/assets/3e1e346c-2adf-4425-b423-b37c6d409c46
+
