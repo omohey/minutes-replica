@@ -1,0 +1,16 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.mapContainer {
+    width: 70%;
+    aspect-ratio: 1/0.55;
+    border-radius: 15px 0px 0px 15px;
+}
+
+@include screen-max-width($screen-max-md) {
+    .mapContainer {
+        width: auto;
+        // aspect-ratio: 1/0.55;
+        border-radius: 15px 15px 0px 0px;
+    }
+}

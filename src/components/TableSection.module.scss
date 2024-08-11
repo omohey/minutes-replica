@@ -1,0 +1,18 @@
+@import "../styles/variables";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-quarterary-500;
+    padding: $spacing-xsmall 0;
+    border-bottom: 1px solid $border-color;
+}
+
+.arrow {
+    transition: transform 0.3s;
+}
+
+.arrow.expanded {
+    transform: rotate(-180deg);
+}

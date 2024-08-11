@@ -1,0 +1,7 @@
+@import '../styles/variables';
+.main{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: $spacing-medium;
+}

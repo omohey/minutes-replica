@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+    td {
+        vertical-align: middle;
+    }
+
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    border-radius: $border-radius-medium;
+    box-shadow: 0px 0px 5px 1px $border-radius-color;
+    border: 1px solid $border-color;
+    padding-bottom: $spacing-xsmall;
+    height: fit-content;
+
+    .ordersTable {
+        .pointer {
+            cursor: default;
+        }
+
+        padding: $spacing-xsmall 0;
+        border-spacing: 0;
+        border-collapse: collapse;
+        vertical-align: middle;
+        
+        tbody.collapsable {
+            td {
+                > div {
+                    max-height: 100px;
+                    overflow: hidden;
+                    transition: max-height 0.5s, padding 0.5s;
+                }
+            }
+        }
+
+        tbody.collapsable.collapsed {
+            td {
+                > div {
+                    max-height: 0px;
+                    overflow: hidden;
+                    padding: 0;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+@include screen-max-width($screen-max-md) {
+    .container {
+        width: auto;
+    }
+}

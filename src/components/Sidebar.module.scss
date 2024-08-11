@@ -1,0 +1,24 @@
+@import "../styles/variables.scss";
+
+.container {
+    width: 82px;
+    height: calc(100vh - 85px);
+    border-right: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+
+    .button {
+        padding: $spacing-small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $minutes-primary-500;
+        font-size: 12px;
+
+    }
+
+    .button:hover, .button.active {
+        background-color: $minutes-primary-25;
+    }
+}

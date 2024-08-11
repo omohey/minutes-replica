@@ -1,0 +1,16 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.content{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: $spacing-small 0;
+}
+
+@include screen-max-width($screen-max-md){
+  .content{
+    flex-direction: column;
+    gap: $spacing-small;
+  }
+}

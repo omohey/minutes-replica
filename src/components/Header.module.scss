@@ -1,0 +1,78 @@
+@import "../styles/variables.scss";
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid $border-color;
+
+
+    .leftHeader {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+
+        .filterBox {
+        display: flex;
+        align-items: center;
+        max-width: 260px;
+        height: 42px;
+        border: 1px solid $border-color;
+        border-radius: $border-radius-small;
+        margin-right: $spacing-small;
+        position: relative;
+        padding-right: 35px;
+        padding-left: $spacing-xxsmall;
+        margin-left: 20px;
+
+        .dropdownIcon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .minutesImg {
+            width: 20px;
+            height: 20px;
+            margin: 0 $spacing-xsmall;
+
+        }
+
+        .text {
+            color: #344054;
+            font-size: $font-size-small;
+            font-weight: $font-weight-medium;
+        }
+
+        .greenIcon {
+            margin-left: $spacing-xsmall;
+            width: 8px;
+            height: 8px;
+            background-color: #22C55E;
+            border-radius: 50%;
+        }
+    
+    }
+
+    }
+
+    .rightHeader {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 24px;
+            height: 24px;
+            margin: 12px;
+        }
+
+        
+    }
+
+}

@@ -1,0 +1,127 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-xsmall 0;
+
+    box-sizing: border-box;
+
+
+
+    .textContainer {
+        display: flex;
+        align-items: center;
+
+        .header {
+            font-size: $font-size-medium;
+            font-weight: $font-weight-normal;
+            padding: $spacing-small;
+            color: $text-primary;
+            margin: 0;
+        }
+
+        .activeOrders {
+            font-size: $font-size-xsmall;
+            font-weight: $font-weight-normal;
+            border-radius: $border-radius-small;
+            background-color: #F9FAFB;
+            padding: $spacing-xsmall;
+            margin: 0;
+            margin-right: $spacing-small;
+            border-radius: $border-radius-xlarge;
+            box-shadow: 2px 2px 2px 1px $border-radius-color;
+            color: $text-secondary;
+        }
+
+    }
+    .filterBox {
+        min-width: 100px;
+        max-width: 260px;
+        height: 42px;
+        border: 1px solid $border-color;
+        border-radius: $border-radius-small;
+        margin-right: $spacing-small;
+        position: relative;
+        padding: 10px;
+        padding-right: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        cursor: default;
+
+
+        .filterDisplay {
+            p {
+                color: $text-quarterary-500;
+            }
+            .dropdownIcon {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .filterOptions {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border: 1px solid $border-color;
+            border-radius: $border-radius-small;
+            z-index: 1;
+            box-shadow: 2px 2px 2px 1px $border-radius-color;
+            padding: $spacing-xsmall;
+            padding-top: 0;
+            margin-top: $spacing-xxsmall;
+            p {
+                color: $text-quarterary-500;
+            }
+        }
+    }
+
+    .filterBox.active {
+        overflow: visible;
+        .filterOptions {
+            display: flex;
+        }
+
+    }
+}
+
+
+@include screen-max-width($screen-min-md) {
+        .container {
+            .textContainer {
+                .header {
+                    font-size: $font-size-small;
+                    padding: $spacing-xsmall;
+                }
+                .activeOrders {
+                    font-size: $font-size-xsmall;
+                    padding: $spacing-xxsmall;
+                    margin-right: $spacing-xsmall;
+                }
+            }
+            
+        }
+}
+
+@include screen-max-width($screen-min-xs) {
+        .container {
+            .textContainer {
+                .header {
+                    font-size: $font-size-xsmall;
+                }
+            }
+
+        }
+}

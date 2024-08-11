@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $borders-default-secondary-100;
+    padding: $spacing-xsmall;
+    border-radius: $border-radius-medium;
+
+    .header {
+        display: flex;
+
+        h5 {
+            font-size: $font-size-small;
+            font-weight: $font-weight-normal;
+            color: $text-quarterary-500;
+
+        }
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 20px;
+
+        li {
+            color: $text-info-default-700;
+            
+        }
+    }
+}

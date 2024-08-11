@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+tr.container:focus-within {
+    border: 1px solid $text-info-default-700;
+}
+
+.vehicle {
+    display: grid;
+    place-content: center;
+    padding: $spacing-small 0;
+
+    img {
+        width: 28px;
+        height: 28px;
+        border-radius: $border-radius-medium;
+    }
+}
+
+.name {
+    padding: $spacing-small 0;
+    
+    p {
+        font-size: $font-size-small;
+        color: $text-info-default-700;
+    }
+}
+
+.status {
+    background-color: var(--status-background, $background-tertiary-100);
+    color: var(--status-color, $text-secondary-700);
+    width: fit-content;
+    padding: 2px 8px;
+    border-radius: $border-radius-large;
+    font-size: 12px;
+    text-align: center;
+}
+
+.distance {
+    font-size: $font-size-small;
+    color: #344054;
+    text-align: center;
+}
+
+
+.eta {
+    color: #344054;
+    font-size: $font-size-small;
+    padding: 0 $spacing-xsmall;
+}
+
+.action {
+    display: flex;
+    padding-right: $spacing-small;
+}
