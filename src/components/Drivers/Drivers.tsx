@@ -13,7 +13,7 @@ type TProps = {
     drivers: TDriver[];
 }
 
-function reducer(state, action) {
+function reducer(state: any, action: any) {
     switch (action.type) {
         case 'filter':
             return { ...state, filter: action.payload };
